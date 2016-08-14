@@ -1,0 +1,8 @@
+
+*.xml
+
+.idea/description.html
+
+JPokemon.iml
+
+*.class
