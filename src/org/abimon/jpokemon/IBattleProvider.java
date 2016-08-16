@@ -1,9 +1,14 @@
 package org.abimon.jpokemon;
 
+import org.abimon.jpokemon.events.PokemonEvent;
+
 /** Any object that provides information for the battle, such as temporary stat changes
  * For in-battle information, this should be used over direct calls
  */
 public interface IBattleProvider {
+
+    public IPokemon[][] getPokemon();
+
     public Species getSpecies(IPokemon pokemon);
 
     public int getHP(IPokemon pokemon);
@@ -41,4 +46,9 @@ public interface IBattleProvider {
     public Item getItem(IPokemon pokemon);
 
     public int getCriticalHitStage(IPokemon pokemon);
+
+    public Weather getWeatherCondition();
+    public void setWeatherCondition(Weather weather);
+
+    public void dispatch(PokemonEvent event);
 }
