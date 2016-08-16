@@ -22,6 +22,11 @@ public class Main {
             }
 
             @Override
+            public void setSpecies(Species species) {
+
+            }
+
+            @Override
             public int getHP() {
                 return 201;
             }
@@ -52,8 +57,43 @@ public class Main {
             }
 
             @Override
+            public void setHP(int hp) {
+
+            }
+
+            @Override
+            public void setAttack(int attack) {
+
+            }
+
+            @Override
+            public void setDefence(int defence) {
+
+            }
+
+            @Override
+            public void setSpecialAttack(int specialAttack) {
+
+            }
+
+            @Override
+            public void setSpecialDefence(int specialDefence) {
+
+            }
+
+            @Override
+            public void setSpeed(int speed) {
+
+            }
+
+            @Override
             public int getGender() {
                 return 0;
+            }
+
+            @Override
+            public void setGender(int gender) {
+
             }
 
             @Override
@@ -64,6 +104,16 @@ public class Main {
             @Override
             public int getLevel() {
                 return 75;
+            }
+
+            @Override
+            public void setExperience(int experience) {
+
+            }
+
+            @Override
+            public void setLevel(int level) {
+
             }
 
             @Override
@@ -97,6 +147,36 @@ public class Main {
             }
 
             @Override
+            public void setEVForHP(int ev) {
+
+            }
+
+            @Override
+            public void setEVForAttack(int ev) {
+
+            }
+
+            @Override
+            public void setEVForDefence(int ev) {
+
+            }
+
+            @Override
+            public void setEVForSpecialAttack(int ev) {
+
+            }
+
+            @Override
+            public void setEVForSpecialDefence(int ev) {
+
+            }
+
+            @Override
+            public void setEVForSpeed(int ev) {
+
+            }
+
+            @Override
             public int getIVForHP() {
                 return 0;
             }
@@ -127,8 +207,43 @@ public class Main {
             }
 
             @Override
+            public void setIVForHP(int iv) {
+
+            }
+
+            @Override
+            public void setIVForAttack(int iv) {
+
+            }
+
+            @Override
+            public void setIVForDefence(int iv) {
+
+            }
+
+            @Override
+            public void setIVForSpecialAttack(int iv) {
+
+            }
+
+            @Override
+            public void setIVForSpecialDefence(int iv) {
+
+            }
+
+            @Override
+            public void setIVForSpeed(int iv) {
+
+            }
+
+            @Override
             public Move[] getMoves() {
                 return new Move[]{Move.get("ICEFANG")};
+            }
+
+            @Override
+            public void setMoves(Move[] moves) {
+
             }
 
             @Override
@@ -137,13 +252,28 @@ public class Main {
             }
 
             @Override
+            public void setHappiness(int happiness) {
+
+            }
+
+            @Override
             public Ability getAbility() {
-                return null;
+                return Ability.get("WONDERGUARD");
             }
 
             @Override
             public Item getItem() {
                 return null;
+            }
+
+            @Override
+            public void setAbility(Ability ability) {
+
+            }
+
+            @Override
+            public void setItem(Item item) {
+
             }
         };
         IPokemon garchomp = new IPokemon() {
@@ -155,6 +285,11 @@ public class Main {
             @Override
             public Species getSpecies() {
                 return Species.get("GARCHOMP");
+            }
+
+            @Override
+            public void setSpecies(Species species) {
+
             }
 
             @Override
@@ -188,8 +323,43 @@ public class Main {
             }
 
             @Override
+            public void setHP(int hp) {
+
+            }
+
+            @Override
+            public void setAttack(int attack) {
+
+            }
+
+            @Override
+            public void setDefence(int defence) {
+
+            }
+
+            @Override
+            public void setSpecialAttack(int specialAttack) {
+
+            }
+
+            @Override
+            public void setSpecialDefence(int specialDefence) {
+
+            }
+
+            @Override
+            public void setSpeed(int speed) {
+
+            }
+
+            @Override
             public int getGender() {
                 return 0;
+            }
+
+            @Override
+            public void setGender(int gender) {
+
             }
 
             @Override
@@ -200,6 +370,16 @@ public class Main {
             @Override
             public int getLevel() {
                 return 78;
+            }
+
+            @Override
+            public void setExperience(int experience) {
+
+            }
+
+            @Override
+            public void setLevel(int level) {
+
             }
 
             @Override
@@ -233,6 +413,36 @@ public class Main {
             }
 
             @Override
+            public void setEVForHP(int ev) {
+
+            }
+
+            @Override
+            public void setEVForAttack(int ev) {
+
+            }
+
+            @Override
+            public void setEVForDefence(int ev) {
+
+            }
+
+            @Override
+            public void setEVForSpecialAttack(int ev) {
+
+            }
+
+            @Override
+            public void setEVForSpecialDefence(int ev) {
+
+            }
+
+            @Override
+            public void setEVForSpeed(int ev) {
+
+            }
+
+            @Override
             public int getIVForHP() {
                 return 0;
             }
@@ -263,8 +473,43 @@ public class Main {
             }
 
             @Override
+            public void setIVForHP(int iv) {
+
+            }
+
+            @Override
+            public void setIVForAttack(int iv) {
+
+            }
+
+            @Override
+            public void setIVForDefence(int iv) {
+
+            }
+
+            @Override
+            public void setIVForSpecialAttack(int iv) {
+
+            }
+
+            @Override
+            public void setIVForSpecialDefence(int iv) {
+
+            }
+
+            @Override
+            public void setIVForSpeed(int iv) {
+
+            }
+
+            @Override
             public Move[] getMoves() {
                 return new Move[]{Move.get("EARTHQUAKE")};
+            }
+
+            @Override
+            public void setMoves(Move[] moves) {
+
             }
 
             @Override
@@ -273,154 +518,34 @@ public class Main {
             }
 
             @Override
+            public void setHappiness(int happiness) {
+
+            }
+
+            @Override
             public Ability getAbility() {
-                return null;
+                return Ability.get("BATTLEARMOR");
             }
 
             @Override
             public Item getItem() {
                 return null;
             }
-        };
 
-        IBattleProvider provider = new IBattleProvider() {
             @Override
-            public Species getSpecies(IPokemon pokemon) {
-                return pokemon.getSpecies();
+            public void setAbility(Ability ability) {
+
             }
 
             @Override
-            public int getHP(IPokemon pokemon) {
-                return pokemon.getHP();
-            }
+            public void setItem(Item item) {
 
-            @Override
-            public int getAttack(IPokemon pokemon) {
-                return pokemon.getAttack();
-            }
-
-            @Override
-            public int getDefence(IPokemon pokemon) {
-                return pokemon.getDefence();
-            }
-
-            @Override
-            public int getSpecialAttack(IPokemon pokemon) {
-                return pokemon.getSpecialAttack();
-            }
-
-            @Override
-            public int getSpecialDefence(IPokemon pokemon) {
-                return pokemon.getSpecialDefence();
-            }
-
-            @Override
-            public int getSpeed(IPokemon pokemon) {
-                return pokemon.getSpeed();
-            }
-
-            @Override
-            public int getGender(IPokemon pokemon) {
-                return pokemon.getGender();
-            }
-
-            @Override
-            public int getExperience(IPokemon pokemon) {
-                return pokemon.getExperience();
-            }
-
-            @Override
-            public int getLevel(IPokemon pokemon) {
-                return pokemon.getLevel();
-            }
-
-            @Override
-            public int getEVForHP(IPokemon pokemon) {
-                return pokemon.getEVForHP();
-            }
-
-            @Override
-            public int getEVForAttack(IPokemon pokemon) {
-                return pokemon.getEVForAttack();
-            }
-
-            @Override
-            public int getEVforDefence(IPokemon pokemon) {
-                return pokemon.getEVforDefence();
-            }
-
-            @Override
-            public int getEVForSpecialAttack(IPokemon pokemon) {
-                return pokemon.getEVForSpecialAttack();
-            }
-
-            @Override
-            public int getEVForSpecialDefence(IPokemon pokemon) {
-                return pokemon.getEVForSpecialDefence();
-            }
-
-            @Override
-            public int getEVForSpeed(IPokemon pokemon) {
-                return pokemon.getEVForSpeed();
-            }
-
-            @Override
-            public int getIVForHP(IPokemon pokemon) {
-                return pokemon.getIVForHP();
-            }
-
-            @Override
-            public int getIVForAttack(IPokemon pokemon) {
-                return pokemon.getIVForAttack();
-            }
-
-            @Override
-            public int getIVforDefence(IPokemon pokemon) {
-                return pokemon.getIVforDefence();
-            }
-
-            @Override
-            public int getIVForSpecialAttack(IPokemon pokemon) {
-                return pokemon.getIVForSpecialAttack();
-            }
-
-            @Override
-            public int getIVForSpecialDefence(IPokemon pokemon) {
-                return pokemon.getIVForSpecialDefence();
-            }
-
-            @Override
-            public int getIVForSpeed(IPokemon pokemon) {
-                return pokemon.getIVForSpeed();
-            }
-
-            @Override
-            public Move[] getMoves(IPokemon pokemon) {
-                return pokemon.getMoves();
-            }
-
-            @Override
-            public int getHappiness(IPokemon pokemon) {
-                return pokemon.getHappiness();
-            }
-
-            @Override
-            public Ability getAbility(IPokemon pokemon) {
-                return pokemon.getAbility();
-            }
-
-            @Override
-            public Item getItem(IPokemon pokemon) {
-                return pokemon.getItem();
-            }
-
-            @Override
-            public int getCriticalHitStage(IPokemon pokemon) {
-                return pokemon.getUID().equalsIgnoreCase("garchomp") ? 4 : 0;
             }
         };
 
-        System.out.println("Glaceon deals: " + Formulas.damageFormulaMin(glaceon, garchomp, glaceon.getMoves()[0], provider) +  " - " + Formulas.damageFormulaMax(glaceon, garchomp, glaceon.getMoves()[0], provider));
-        System.out.println("Garchomp deals: " + Formulas.damageFormulaMin(garchomp, glaceon, garchomp.getMoves()[0], provider) +  " - " + Formulas.damageFormulaMax(garchomp, glaceon, garchomp.getMoves()[0], provider));
+        IBattleProvider provider = new BattleProvider(new IPokemon[]{glaceon}, new IPokemon[]{garchomp});
+
+        System.out.println("Glaceon deals: " + Formulas.damageFormula(glaceon, garchomp, glaceon.getMoves()[0], provider));
+        System.out.println("Garchomp deals: " + Formulas.damageFormula(garchomp, glaceon, garchomp.getMoves()[0], provider));
     }
 }
