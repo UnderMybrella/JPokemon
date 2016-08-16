@@ -57,6 +57,13 @@ public class Move {
 		}
 	}
 
+	public boolean hasFlag(MoveFlag flag){
+		for(MoveFlag f : flags)
+			if(f == flag)
+				return true;
+		return false;
+	}
+
 	public enum MoveTarget{
 		SINGLE_POKEMON_OTHER,
 		NO_TARGET,
