@@ -5,7 +5,7 @@ import org.abimon.omnis.io.Data;
 import java.io.File;
 import java.util.HashMap;
 
-public class Ability {
+public class Ability{
     public static final HashMap<String, Ability> ABILITIES = new HashMap<String, Ability>();
 
     String internalName = "";
@@ -35,5 +35,9 @@ public class Ability {
 
     public String toString() {
         return displayName;
+    }
+
+    public static Ability get(String name) {
+        return ABILITIES.get(name);
     }
 }
