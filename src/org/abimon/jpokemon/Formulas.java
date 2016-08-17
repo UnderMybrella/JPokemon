@@ -79,6 +79,6 @@ public class Formulas {
         typeModifier = damageModifyEvent.typeModifier;
         double other = damageModifyEvent.other;
 
-        return stab * typeModifier * critical * ((100 - new Random().nextInt(15)) / 100.0);
+        return stab * typeModifier * critical * other * ((100 - new Random().nextInt(15)) / 100.0);
     }
 }
