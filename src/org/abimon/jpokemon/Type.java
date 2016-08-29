@@ -23,7 +23,6 @@ public class Type {
 				//System.out.println("[" + s + "]");
 				if(s.matches("\\[\\d+\\]")){
 					Type type = new Type(name, internalName, weaknesses, resistances, immunities);
-					System.out.println("Registered new type: " + type);
 					name = null;
 					internalName = null;
 					weaknesses = null;
@@ -93,6 +92,8 @@ public class Type {
 			return false;
 		if(obj instanceof Type)
 			return this.internalName.equals(((Type) obj).internalName);
+		if(obj instanceof String)
+			return this.internalName.equals(obj);
 		return false;
 	}
 }

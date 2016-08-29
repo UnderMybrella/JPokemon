@@ -1,0 +1,10 @@
+Just writing this down so I don't get confused later on
+
+Battle events (AfterHitEvent, CritChanceEvent, DamageModifyEvent, etc) are dispatched to the IBattleProvider that
+is made for the battle. This provider then dispatches the event to all available and registered listeners.
+
+Therefore, it is perfectly reasonable for the IBattleProvider to check the event that it is called to dispatch,
+and modify values as needed. The prime example of this is BattleProvider, which handles the abilities of Pokemon
+in relation to the event. Also, if this is done, the IBattleProvider may assume that it is the provider for the
+battle, since this will almost always be true. If this is not the case, you need to reconsider how you're handling
+events.

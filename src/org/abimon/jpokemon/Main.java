@@ -21,8 +21,11 @@ public class Main {
             }
 
             @Override
-            public void setSpecies(Species species) {
+            public void setSpecies(Species species) {}
 
+            @Override
+            public int getMaxHP() {
+                return 201;
             }
 
             @Override
@@ -53,6 +56,11 @@ public class Main {
             @Override
             public int getSpeed() {
                 return 0;
+            }
+
+            @Override
+            public void setMaxHP(int hp) {
+
             }
 
             @Override
@@ -274,6 +282,16 @@ public class Main {
             public void setItem(Item item) {
 
             }
+
+            @Override
+            public String[] getStatusConditions() {
+                return new String[0];
+            }
+
+            @Override
+            public void setStatusConditions(String[] statuses) {
+
+            }
         };
         IPokemon garchomp = new IPokemon() {
             @Override
@@ -289,6 +307,11 @@ public class Main {
             @Override
             public void setSpecies(Species species) {
 
+            }
+
+            @Override
+            public int getMaxHP() {
+                return 270;
             }
 
             @Override
@@ -319,6 +342,11 @@ public class Main {
             @Override
             public int getSpeed() {
                 return 0;
+            }
+
+            @Override
+            public void setMaxHP(int hp) {
+
             }
 
             @Override
@@ -523,7 +551,7 @@ public class Main {
 
             @Override
             public Ability getAbility() {
-                return Ability.get("BATTLEARMOR");
+                return Ability.get("MOLDBREAKER");
             }
 
             @Override
@@ -540,11 +568,23 @@ public class Main {
             public void setItem(Item item) {
 
             }
+
+            @Override
+            public String[] getStatusConditions() {
+                return new String[0];
+            }
+
+            @Override
+            public void setStatusConditions(String[] statuses) {
+
+            }
         };
 
-        IBattleProvider provider = new BattleProvider(new IPokemon[]{glaceon}, new IPokemon[]{garchomp});
+        IBattleProvider provider = new BattleProvider(1, new IPokemon[]{glaceon}, new IPokemon[]{garchomp});
 
         System.out.println("Glaceon deals: " + Formulas.damageFormula(glaceon, garchomp, glaceon.getMoves()[0], provider));
         System.out.println("Garchomp deals: " + Formulas.damageFormula(garchomp, glaceon, garchomp.getMoves()[0], provider));
+
+        System.out.println(Species.GrowthRate.MEDIUM.getRequiredEXPForLevel(100));
     }
 }

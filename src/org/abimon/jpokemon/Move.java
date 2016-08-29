@@ -17,6 +17,7 @@ public class Move {
 	public int accuracy = 0;
 	public int totalPP = 0;
 	public int additionalEffectChance = 0;
+	public double recoilPercentage = 0.0;
 	public MoveTarget target = MoveTarget.SINGLE_POKEMON_OTHER;
 	public int priority = 0;
 	public MoveFlag[] flags = null;
@@ -44,10 +45,14 @@ public class Move {
 				move.target = MoveTarget.getTarget(Integer.parseInt(params[10]));
 				move.priority = Integer.parseInt(params[11]);
 				move.flags = MoveFlag.getFlags(params[12]);
-				move.description = params[13];
+				if(params.length > 14){
+					move.recoilPercentage = Double.parseDouble(params[13]);
+					move.description = params[14];
+				}
+				else
+					move.description = params[13];
 
 				MOVES.put(move.name, move);
-				System.out.println("Registered " + move);
 			}
 
 			System.out.println("Registered " + MOVES.size() + " moves.");

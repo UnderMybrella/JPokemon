@@ -25,8 +25,8 @@ public class Formulas {
     }
 
     public static double damageModifier(IPokemon attacking, IPokemon target, Move move, IBattleProvider provider){
-        double stab = provider.getSpecies(attacking).type1 != null && provider.getSpecies(attacking).type1.equals(move.type) ? 1.5 : (provider.getSpecies(attacking).type2 != null && provider.getSpecies(attacking).type2.equals(move.type)) ? 1.5 : 1;
-        double typeModifier = 1.0 * (provider.getSpecies(target).type1 != null ? provider.getSpecies(target).type1.getModifier(move.type) : 1) * (provider.getSpecies(target).type2 != null ? provider.getSpecies(target).type2.getModifier(move.type) : 1);
+        double stab = provider.getTypeOne(attacking) != null && provider.getTypeOne(attacking).equals(move.type) ? 1.5 : (provider.getTypeTwo(attacking) != null && provider.getTypeTwo(attacking).equals(move.type)) ? 1.5 : 1;
+        double typeModifier = 1.0 * (provider.getTypeOne(target) != null ? provider.getTypeOne(target).getModifier(move.type) : 1) * (provider.getTypeTwo(target) != null ? provider.getTypeTwo(target).getModifier(move.type) : 1);
         int critStage = provider.getCriticalHitStage(attacking);
 
         STABEvent stabEvent = new STABEvent(attacking, target, move, provider, stab);
@@ -77,8 +77,20 @@ public class Formulas {
 
         stab = damageModifyEvent.stab;
         typeModifier = damageModifyEvent.typeModifier;
-        double other = damageModifyEvent.other;
+        double other = damageModifyEvent.getOther();
 
         return stab * typeModifier * critical * other * ((100 - new Random().nextInt(15)) / 100.0);
+    }
+
+    public static int getHPForLevel(double base, double iv, double ev, int level){
+        double hp = (((2 * base) + iv + (ev / 4)) * level) / 100;
+        hp += level + 10;
+
+        return (int) hp;
+    }
+
+    public static int getStatForLevel(double base, double iv, double ev, int level, double nature){
+        double otherStat = (((((2 * base) + iv + (ev / 4)) * level) / 100) + 5) * nature;
+        return (int) otherStat;
     }
 }

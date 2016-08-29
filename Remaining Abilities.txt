@@ -1,0 +1,97 @@
+Remaining Abilities:
+
+8,SANDVEIL,Sand Veil,"Boosts the Pokémon's evasion in a sandstorm." (...I need to do evasion/accuracy first)
+13,CLOUDNINE,Cloud Nine,"Eliminates the effects of weather." (...more checks)
+14,COMPOUNDEYES,Compound Eyes,"The Pokémon's accuracy is boosted." (ACCURACY)
+19,SHIELDDUST,Shield Dust,"Blocks the added effects of attacks taken." (Well the added effects aren't even added so...?)
+21,SUCTIONCUPS,Suction Cups,"Negates all moves that force switching out." (See above)
+22,INTIMIDATE,Intimidate,"Lowers the foe's Attack stat." (When?)
+23,SHADOWTAG,Shadow Tag,"Prevents the foe from escaping." (Not sure how this one works)
+24,ROUGHSKIN,Rough Skin,"Inflicts damage to the foe on contact." (HOW MUCH)
+27,EFFECTSPORE,Effect Spore,"Contact may poison or cause paralysis or sleep." (HOW OFTEN)
+28,SYNCHRONIZE,Synchronize,"Passes a burn, poison, or paralysis to the foe." (WHEN)
+31,LIGHTNINGROD,Lightning Rod,"Draws in all Electric-type moves to up Sp. Attack." (On attack effect complete, drawing effect incomplete)
+32,SERENEGRACE,Serene Grace,"Boosts the likelihood of added effects appearing." (No effects yet)
+33,SWIFTSWIM,Swift Swim,"Boosts the Pokémon's Speed in rain." (How much [I think it's one stage, but it doesn't hurt to check])
+34,CHLOROPHYLL,Chlorophyll,"Boosts the Pokémon's Speed in sunshine." (See above)
+35,ILLUMINATE,Illuminate,"Raises the likelihood of meeting wild Pokémon." (No in battle effect)
+36,TRACE,Trace,"The Pokémon copies a foe's Ability." (...when)
+38,POISONPOINT,Poison Point,"Contact with the Pokémon may poison the attacker." (HOW OFTEN)
+42,MAGNETPULL,Magnet Pull,"Prevents Steel-type Pokémon from escaping." (No escaping yet)
+44,RAINDISH,Rain Dish,"The Pokémon gradually regains HP in rain." (End of turn; how much)
+46,PRESSURE,Pressure,"The Pokémon raises the foe's PP usage." (No PP yet)
+48,EARLYBIRD,Early Bird,"The Pokémon awakens quickly from sleep." (...how quickly; sleep isn't handled)
+49,FLAMEBODY,Flame Body,"Contact with the Pokémon may burn the attacker." ("MAY")
+50,RUNAWAY,Run Away,"Enables a sure getaway from wild Pokémon." (No escaping)
+53,PICKUP,Pickup,"The Pokémon may pick up items." (...this is gonna be hell)
+54,TRUANT,Truant,"Pokémon can't attack on consecutive turns." (o u c h)
+55,HUSTLE,Hustle,"Boosts the Attack stat, but lowers accuracy." (HOW MUCH)
+56,CUTECHARM,Cute Charm,"Contact with the Pokémon may cause infatuation." (HOW OFTEN, GENDERS?)
+57,PLUS,Plus,"Ups Sp. Atk if another Pokémon has Plus or Minus." (Nope)
+58,MINUS,Minus,"Ups Sp. Atk if another Pokémon has Plus or Minus." (Nope)
+59,FORECAST,Forecast,"Castform transforms with the weather." (Err, this could be a problem)
+60,STICKYHOLD,Sticky Hold,"Protects the Pokémon from item theft." (Hmm)
+61,SHEDSKIN,Shed Skin,"The Pokémon may heal its own status problems." (...WAYYY TOO VAGUE)
+64,LIQUIDOOZE,Liquid Ooze,"Damages attackers using any draining move." (How much?)
+71,ARENATRAP,Arena Trap,"Prevents the foe from fleeing." (No fleeing)
+76,AIRLOCK,Air Lock,"Eliminates the effects of weather." (How)
+77,TANGLEDFEET,Tangled Feet,"Raises evasion if the Pokémon is confused." (Evasion)
+80,STEADFAST,Steadfast,"Raises Speed each time the Pokémon flinches." (One stage?)
+81,SNOWCLOAK,Snow Cloak,"Raises evasion in a hailstorm." (Evasion)
+82,GLUTTONY,Gluttony,"Encourages the early use of a held Berry." (> Berries)
+84,UNBURDEN,Unburden,"Raises Speed if a held item is used." (> Held Item)
+86,SIMPLE,Simple,"The Pokémon is prone to wild stat changes." (When/How MucH)
+88,DOWNLOAD,Download,"Adjusts power according to a foe's defenses." (I believe this is +1 stage but I'll check)
+90,POISONHEAL,Poison Heal,"Restores HP if the Pokémon is poisoned." (How much, end of turn?)
+92,SKILLLINK,Skill Link,"Increases the frequency of multi-strike moves." (By...?)
+93,HYDRATION,Hydration,"Heals status problems if it is raining." (How often/When?)
+94,SOLARPOWER,Solar Power,"In sunshine, Sp. Atk is boosted but HP decreases." (How much/When? [I'll probably just incorporate this into the damage formula])
+95,QUICKFEET,Quick Feet,"Boosts Speed if there is a status problem." (By how much?)
+99,NOGUARD,No Guard,"Ensures attacks by or against the Pokémon land." (Accuracy)
+100,STALL,Stall,"The Pokémon moves after all other Pokémon do." (Move time)
+102,LEAFGUARD,Leaf Guard,"Prevents problems with status in sunny weather."(Double check, but I believe this prevents statuses from being applied)
+103,KLUTZ,Klutz,"The Pokémon can't use any held items." (ITEMS)
+106,AFTERMATH,Aftermath,"Damages the attacker landing the finishing hit." (this is gonna be fun)
+107,ANTICIPATION,Anticipation,"Senses a foe's dangerous moves." (...shit)
+108,FOREWARN,Forewarn,"Determines what moves a foe has." (Also shit)
+109,UNAWARE,Unaware,"Ignores any stat changes in the Pokémon." (Hm?)
+112,SLOWSTART,Slow Start,"Temporarily halves Attack and Speed." (Just need to change the effects)
+115,ICEBODY,Ice Body,"The Pokémon gradually regains HP in a hailstorm." (hell)
+118,HONEYGATHER,Honey Gather,"The Pokémon may gather Honey from somewhere." (also hell)
+119,FRISK,Frisk,"The Pokémon can check a foe's held item." (Still hell)
+121,MULTITYPE,Multitype,"Changes type to match the held Plate." (H E L L)
+122,FLOWERGIFT,Flower Gift,"Powers up party Pokémon when it is sunny." (How much?)
+123,BADDREAMS,Bad Dreams,"Reduces a sleeping foe's HP." (How much/When)
+124,PICKPOCKET,Pickpocket,"Steals an item when hit by another Pokémon." (Itms)
+125,SHEERFORCE,Sheer Force,"Removes added effects to increase move damage." (Need to negate the effect)
+126,CONTRARY,Contrary,"Makes stat changes have an opposite effect." (When?)
+127,UNNERVE,Unnerve,"Makes the foe nervous and unable to eat Berries." (Ah yes > Berries)
+128,DEFIANT,Defiant,"When its stats are lowered its Attack increases." 
+129,DEFEATIST,Defeatist,"Lowers stats when HP becomes half or less."
+130,CURSEDBODY,Cursed Body,"May disable a move used on the Pokémon."
+131,HEALER,Healer,"May heal an ally's status conditions."
+133,WEAKARMOR,Weak Armor,"Physical attacks lower Defense and raise Speed."
+134,HEAVYMETAL,Heavy Metal,"Doubles the Pokémon's weight."
+135,LIGHTMETAL,Light Metal,"Halves the Pokémon's weight."
+139,HARVEST,Harvest,"May create another Berry after one is used."
+140,TELEPATHY,Telepathy,"Anticipates an ally's attack and dodges it."
+141,MOODY,Moody,"Raises one stat and lowers another."
+142,OVERCOAT,Overcoat,"Protects the Pokémon from damage from weather."
+143,POISONTOUCH,Poison Touch,"May poison targets when a Pokémon makes contact."
+144,REGENERATOR,Regenerator,"Restores a little HP when withdrawn from battle."
+145,BIGPECKS,Big Pecks,"Protects from Defense-lowering attacks."
+146,SANDRUSH,Sand Rush,"Boosts the Pokémon's Speed in a sandstorm."
+147,WONDERSKIN,Wonder Skin,"Makes status-changing moves more likely to miss."
+148,ANALYTIC,Analytic,"Boosts move power when the Pokémon moves last." (Applies extra damage, doesn't actually mark the target as having 'moved', though)
+149,ILLUSION,Illusion,"Comes out disguised as the Pokémon in back." (This is gonna be hell)
+150,IMPOSTER,Imposter,"It transforms itself into the Pokémon it is facing." (*even more hell*)
+151,INFILTRATOR,Infiltrator,"Passes through the foe's barrier and strikes."
+152,MUMMY,Mummy,"Contact with this Pokémon spreads this Ability."
+153,MOXIE,Moxie,"Boosts Attack after knocking out any Pokémon."
+154,JUSTIFIED,Justified,"Raises Attack when hit by a Dark-type move."
+155,RATTLED,Rattled,"Some move types scare it and boost its Speed."
+156,MAGICBOUNCE,Magic Bounce,"Reflects status-changing moves."
+158,PRANKSTER,Prankster,"Gives priority to a status move."
+160,IRONBARBS,Iron Barbs,"Inflicts damage to the Pokémon on contact."
+161,ZENMODE,Zen Mode,"Changes the Pokémon's shape when HP is halved."
+162,VICTORYSTAR,Victory Star,"Boosts the accuracy of its allies and itself."

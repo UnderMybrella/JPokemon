@@ -11,8 +11,9 @@ public class DamageModifyEvent extends PokemonEvent{
     public IPokemon attacking, target;
     public Move move;
     public IBattleProvider provider;
-    public double stab, typeModifier, other;
+    public double stab, typeModifier;
     public boolean isCritical;
+    private double other;
 
     public DamageModifyEvent(IPokemon attacking, IPokemon target, Move move, IBattleProvider provider, double stab, double typeModifier, boolean isCritical) {
         this.attacking = attacking;
@@ -23,5 +24,13 @@ public class DamageModifyEvent extends PokemonEvent{
         this.typeModifier = typeModifier;
         this.other = 1;
         this.isCritical = isCritical;
+    }
+
+    public void registerOtherDamage(double modifier){
+        other *= modifier;
+    }
+
+    public double getOther(){
+        return other;
     }
 }
