@@ -12,11 +12,14 @@ public class StatChangeEvent extends PokemonEvent{
     public String cause;
     public IBattleProvider provider;
 
-    public StatChangeEvent(IPokemon changing, String stat, int changeFrom, int changeTo, String cause, IBattleProvider provider){
+    public boolean stages;
+
+    public StatChangeEvent(IPokemon changing, String stat, int changeFrom, int changeTo, boolean stages, String cause, IBattleProvider provider){
         this.changing = changing;
         this.stat = stat;
         this.changeFrom = changeFrom;
         this.changeTo = changeTo;
+        this.stages = stages;
         this.cause = cause;
         this.provider = provider;
     }

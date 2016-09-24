@@ -1,10 +1,12 @@
 package org.abimon.jpokemon;
 
+import org.abimon.omnis.util.ExtraArrays;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.UUID;
 
-public interface IPokemon {
+public interface IPokemon{
 
     /** The UID doesn't necessarily have to be a UUID, just any form of unique identification
      * Should *not* be randomly generated at the time of calling, and should *not* change. Preferably ever.
@@ -91,7 +93,7 @@ public interface IPokemon {
 
     public static IPokemon create(Species templateSpecies, HashMap<String, Object> custom){
         IPokemon pkmn = new IPokemon() {
-            String uid = UUID.randomUUID().toString();
+            String uid = (String) custom.getOrDefault("uid", UUID.randomUUID().toString());
 
             Species species = null;
 
@@ -420,7 +422,7 @@ public interface IPokemon {
         try {
             int level = (int) custom.getOrDefault("level", 1);
 
-            int evHP = (int) custom.getOrDefault("evHP", 0);
+            int evHP = (int) custom.getOrDefault("ev_hp", 0);
             int evAtk = (int) custom.getOrDefault("ev_atk", 0);
             int evDef = (int) custom.getOrDefault("ev_def", 0);
             int evSpAtk = (int) custom.getOrDefault("ev_sp_atk", 0);
@@ -444,7 +446,7 @@ public interface IPokemon {
             pkmn.setSpecies(templateSpecies);
 
             pkmn.setLevel(level);
-            pkmn.setExperience(templateSpecies.growthRate.getRequiredEXPForLevel(level));
+            pkmn.setExperience((int) custom.getOrDefault("exp", templateSpecies.growthRate.getRequiredEXPForLevel(level)));
 
             pkmn.setMaxHP(hp);
             pkmn.setHP(hp);
@@ -455,19 +457,61 @@ public interface IPokemon {
             pkmn.setSpeed(speed);
 
             Move[] moves = new Move[4];
-            Move[][] levelUp = templateSpecies.levelUp.values().toArray(new Move[0][]);
+            Move[][] levelUp = ExtraArrays.randomise(templateSpecies.levelUp.values().toArray(new Move[0][]));
 
             for (int i = 0; i < moves.length; i++)
                 moves[i] = Move.get((String) custom.getOrDefault("move_" + (i + 1), levelUp[Math.min(levelUp.length, i)][0].name));
 
             pkmn.setMoves(moves);
             pkmn.setAbility(Ability.get((String) custom.getOrDefault("ability", templateSpecies.ability1.internalName)));
+            pkmn.setItem(Item.get((String) custom.getOrDefault("item", templateSpecies.wildItemCommon)));
+
+            pkmn.setStatusConditions(((String) custom.getOrDefault("status_conditions", "")).replaceAll("\\s+", "").toUpperCase().split(","));
+
         }
         catch(Throwable th){
             th.printStackTrace();
         }
 
         return pkmn;
+    }
+
+    public default IPokemon clonePokemon(){
+        HashMap<String, Object> customData = new HashMap<>();
+
+        customData.put("level", getLevel());
+        customData.put("exp", getExperience());
+
+        customData.put("ev_hp", getEVForHP());
+        customData.put("ev_atk", getEVForAttack());
+        customData.put("ev_def", getEVforDefence());
+        customData.put("ev_sp_atk", getEVForSpecialAttack());
+        customData.put("ev_sp_def", getEVForSpecialDefence());
+
+        customData.put("iv_hp", getIVForHP());
+        customData.put("iv_atk", getIVForAttack());
+        customData.put("iv_def", getIVforDefence());
+        customData.put("iv_sp_atk", getIVForSpecialAttack());
+        customData.put("iv_sp_def", getIVForSpecialDefence());
+
+        customData.put("hp", getHP());
+        customData.put("atk", getAttack());
+        customData.put("def", getDefence());
+        customData.put("sp_atk", getSpecialAttack());
+        customData.put("sp_def", getSpecialDefence());
+
+        Move[] moves = getMoves();
+
+        for (int i = 0; i < moves.length; i++)
+            customData.put("move_" + (i + 1), moves[i] != null ? moves[i].name : "");
+
+        customData.put("ability", getAbility().internalName);
+        customData.put("item", getItem() != null ? getItem().internalName : "");
+
+        customData.put("status_conditions", Arrays.toString(getStatusConditions()).replace("[", "").replace("]", ""));
+        customData.put("uid", getUID());
+
+        return create(getSpecies(), customData);
     }
 
     public default String toString(IPokemon pokemon){

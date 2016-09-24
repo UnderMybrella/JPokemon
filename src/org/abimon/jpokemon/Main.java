@@ -1,5 +1,7 @@
 package org.abimon.jpokemon;
 
+import org.abimon.omnis.util.General;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -584,6 +586,17 @@ public class Main {
 
         System.out.println("Glaceon deals: " + Formulas.damageFormula(glaceon, garchomp, glaceon.getMoves()[0], provider));
         System.out.println("Garchomp deals: " + Formulas.damageFormula(garchomp, glaceon, garchomp.getMoves()[0], provider));
+
+        IPokemon porygonZ = IPokemon.create(Species.get("PORYGONZ"), General.createHashmap(new String[]{"level", "move_1", "ability", "sp_atk"}, new Object[]{100, "HYPERBEAM", "ADAPTABILITY", 561}));
+        IPokemon blissey = IPokemon.create(Species.get("BLISSEY"), General.createHashmap(new String[]{"level", "sp_def"}, new Object[]{100, 405}));
+
+        IBattleProvider test = new BattleProvider(1, new IPokemon[]{porygonZ}, new IPokemon[]{blissey});
+
+        test.setSpecialAttackStage(porygonZ, 6);
+
+        System.out.println("Porygon-Z deals: " + Formulas.damageFormula(porygonZ, blissey, porygonZ.getMoves()[0], test));
+
+        System.out.println(blissey.toString(null));
 
         System.out.println(Species.GrowthRate.MEDIUM.getRequiredEXPForLevel(100));
     }

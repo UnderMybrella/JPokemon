@@ -74,6 +74,9 @@ public interface IBattleProvider {
     public Ability getAbility(IPokemon pokemon);
     public Item getItem(IPokemon pokemon);
 
+    public void setAbility(IPokemon pokemon, Ability ability);
+    public void setItem(IPokemon pokemon, Item item);
+
     public int getCriticalHitStage(IPokemon pokemon);
 
     public int getAttackStage(IPokemon pokemon);
